@@ -1,2 +1,4 @@
-# homelab
-My homelab stacks, templates, and more!
+# My Homelab Setup
+This is my config backup + sharing setup. This will continue to be updated.
+
+
