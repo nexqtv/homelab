@@ -3,8 +3,8 @@
 This is currently a work in progress. If you have any issues please submit or suggest any edits.
 
 # Navigation
-- [Apps](apps/)
-- [Media Server](media/)
+- [Apps](homelab/apps/)
+- [Media Server](homelab/media/)
   - [Arr Apps](#arr-apps)
     - [Included Applications](#included-applications)
     - [How It Works](#how-it-works)
@@ -26,7 +26,7 @@ This is currently a work in progress. If you have any issues please submit or su
   - [iOS Arr Apps](#ios-arr-apps)
   - [Jellyfin Companion Stack](#jellyfin-companion-stack)
     - [How They Work Together](#how-they-work-together)
-- [Remote Access](access/)
+- [Remote Access](homelab/access/)
 
 
 # Data Folders
