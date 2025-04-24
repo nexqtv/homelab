@@ -4,12 +4,11 @@ services:
     container_name: jellyfin
     ports:
      - "8096:8096"
-     - "8920:8920"
     devices:
-     - /dev/dri:/dev/dri  # QSV passthrough - check readme for more info
+     - /dev/dri:/dev/dri  # Hardware Acceleration passthrough - check readme for more info
     volumes:
      - /docker/jellyfin/config:/config
      - /data:/media  # movies and shows are mounted from jellyfin during setup
     environment:
-     - JELLYFIN_PublishedServerUrl=http://<set-ip>:8096 # change this to work in your setup. not required.
+     - JELLYFIN_PublishedServerUrl=http://example.com # change this to work in your setup. not required.
     restart: unless-stopped
