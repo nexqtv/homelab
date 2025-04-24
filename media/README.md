@@ -26,6 +26,8 @@ This is currently a work in progress. If you have any issues please submit or su
   - [iOS Arr Apps](#ios-arr-apps)
   - [Jellyfin Companion Stack](#jellyfin-companion-stack)
     - [How They Work Together](#how-they-work-together)
+  - [No VPN Arr Compose](#no-vpn-arr-compose)
+  - [Tdarr Automated Media Transcoding](#tdarr-automated-media-transcoding)
 - [Remote Access](/access/)
 
 
@@ -257,8 +259,25 @@ This stack extends Jellyfin's capabilities with modern interfaces and insightful
 
 > You get the best of both worlds: a beautiful UI from StreamyStats, and broad API support from Jellystat.
 
+# tdarr Automated Media Transcoding
+**Tdarr** is a powerful, distributed media transcoding system that automatically optimizes your video library by converting files into more space-efficient formats—most commonly **H.265 (HEVC)**. It’s perfect for large libraries where reducing file sizes can lead to massive storage savings without significant loss in visual quality.
 
-# No VPN arr-compose (NOT RECOMMENDED)
+### What It Does
+
+- Automatically scans your media folders for inefficient or non-compliant files
+- Uses customizable filters and plugins to decide which files should be transcoded
+- Transcodes videos into smaller formats (like **H.265**) using tools like `ffmpeg`, `HandBrake`, or `nvenc` (for GPU-accelerated encoding)
+- Replaces the original files or stores them in a new directory once conversion is complete
+- Supports distributed processing via multiple worker nodes for faster performance
+
+### Why Use Tdarr?
+
+- **Save Disk Space:** H.265 can reduce file sizes by up to 50% compared to H.264 with similar quality
+- **Fully Automated:** Set it up once and let it process new or existing files in the background
+- **Works With Arrs:** Tdarr replaces entire files with new codec and Arr apps will see the change
+
+
+# No VPN arr compose
 ```
 services:
   qbittorrent:
