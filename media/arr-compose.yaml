@@ -13,7 +13,7 @@ services:
       - SERVER_COUNTRIES=
       - HEALTH_VPN_DURATION_INITIAL=120s
       # - BLOCK_MALICIOUS=off
-      - FIREWALL_OUTBOUND_SUBNETS=192.168.2.0/24 # Prowlarr fix: change to your specific subnet
+      # - FIREWALL_OUTBOUND_SUBNETS=192.168.2.0/24 # add if prowlarr wont connect to other arr apps, change to your specific subnet
     ports:
       - "8080:8080"
       - "6881:6881"
@@ -34,7 +34,7 @@ services:
       - LOG_LEVEL=info
       - HEALTH_SERVER_ADDRESS=127.0.0.1:9999
       - TZ=America/Halifax
-    restart: always
+    restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 
@@ -53,7 +53,7 @@ services:
     volumes:
       - /docker/qbittorrent:/config
       - /data:/data
-    restart: always
+    restart: unless-stopped
     healthcheck:
         test: ping -c 1 www.google.com || exit 1
         interval: 60s
@@ -74,7 +74,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /docker/prowlarr:/config
-    restart: always
+    restart: unless-stopped
     network_mode: service:gluetun
     healthcheck:
         test: ping -c 1 www.google.com || exit 1
