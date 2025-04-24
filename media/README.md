@@ -10,6 +10,9 @@ This is currently a work in progress. If you have any issues please submit or su
     - [How It Works](#how-it-works)
     - [Features](#features)
   - [Data Folders](#data-folders)
+  - [Download Clients](#download-clients)
+    - [NZBGet](#nzbget)
+    - [qBittorrent](#qbittorrent)
   - [Gluetun](#gluetun-vpn)
     - [Testing Gluetun Connectivity](#testing-gluetun=connectivity)
     - [Passing Through Containers](#passing-through-containers)
@@ -19,9 +22,8 @@ This is currently a work in progress. If you have any issues please submit or su
     - [Gluetun Proxmox Fix](#gluetun-proxmox-fix)
     - [Reduce Gluetun Ram Usage](#reduce-gluetun-ram-usage)
     - [Testing Containers](#testing-other-containers)
-  - [Download Clients](#download-clients)
-    - [NZBGet](#nzbget)
-    - [qBittorrent](#qbittorrent)
+  - [Jellyfin Companion Stack](#jellyfin-companion-stack)
+    - [How They Work Together](#how-they-work-together)
 - [Remote Access](access/)
 
 
@@ -201,6 +203,23 @@ The **ARR Stack** is a powerful collection of self-hosted applications designed 
 - Supports both Torrent and Usenet
 - API support and full integration between components
 - Easily extensible with third-party apps and downloaders
+
+# Jellyfin Companion Stack
+This stack extends Jellyfin's capabilities with modern interfaces and insightful statistics. It includes multiple apps working in harmony to enhance your media server experience, while still offering API compatibility for third-party dashboards and integrations.
+
+| App             | Role                      | Description                                                                                                                                                   |
+|------------------|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Jellyseerr**   | 🌟 Request Management     | A fork of Overseerr tailored for Jellyfin. Lets users request movies and TV shows via a sleek web interface, with admin approval workflows and notifications. |
+| **StreamyStats** | 📊 Live Statistics UI     | A visually polished dashboard to view real-time and historical playback statistics from Jellyfin. Preferred for its elegant UI and detailed user insights.    |
+| **Jellystat**    | ⚙️ Stats API Backend      | Provides a backend API to expose Jellyfin statistics. While not as visually refined as StreamyStats, it is still vital for supporting external tools.         |
+
+### How They Work Together
+
+- **Jellyseerr** handles user requests and approval queues for your Jellyfin media.
+- **StreamyStats** connects to your Jellyfin server to display current viewing sessions, history, bandwidth usage, and user activity in a modern dashboard.
+- **Jellystat** silently runs in the background to provide an API layer, ensuring compatibility with Grafana dashboards and other tools that rely on Jellyfin metrics.
+
+> You get the best of both worlds: a beautiful UI from StreamyStats, and broad API support from Jellystat.
 
 
 # No VPN arr-compose (NOT RECOMMENDED)
