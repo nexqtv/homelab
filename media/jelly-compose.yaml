@@ -39,3 +39,47 @@ services:
       - "3000:3000"
     depends_on:
       - jellystat-db
+
+  streamystats:
+    image: fredrikburmester/streamystats-nextjs:edge
+    ports:
+      - "3001:3000"
+    depends_on:
+      - phoenix
+    networks:
+      - backend
+    environment:
+      API_URL: "http://phoenix:4000/api"
+      TZ: "America/Halifax"
+
+  phoenix:
+    image: fredrikburmester/streamystats-phoenix:edge
+    environment:
+      DATABASE_URL: "ecto://postgres:postgres@db/streamystat"
+      SECRET_KEY_BASE: "r0NgGxu5ETTDgF5G7mJsMevMbAF7y4w0IJlCRjzxHqSjbcrPqTQTzajOH0ne0sHH"
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+    networks:
+      - backend
+
+  streamydb:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /var/lib/postgresql/data/pgdata
+    restart: always
+    networks:
+      - backend
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    logging:
+      driver: "none"
+
+volumes:
+  pgdata:
+
+networks:
+  backend:
