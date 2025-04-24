@@ -13,15 +13,17 @@ This is currently a work in progress. If you have any issues please submit or su
   - [Download Clients](#download-clients)
     - [NZBGet](#nzbget)
     - [qBittorrent](#qbittorrent)
+  - [Flood UI](#flood-ui)
   - [Gluetun](#gluetun-vpn)
-    - [Testing Gluetun Connectivity](#testing-gluetun=connectivity)
+    - [Testing Gluetun Connectivity](#testing-gluetun-connectivity)
     - [Passing Through Containers](#passing-through-containers)
     - [External Container to Gluetun](#external-container-to-gluetun)
-    - [Container in another compose.yml](#container-in-another-docker-compose.yaml)
+    - [Container In Another Docker Compose](#container-in-another-docker-compose)
     - [Arr apps wont connect to prowlarr](#arr-apps-wont-connect-to-prowlarr)
     - [Gluetun Proxmox Fix](#gluetun-proxmox-fix)
     - [Reduce Gluetun Ram Usage](#reduce-gluetun-ram-usage)
     - [Testing Containers](#testing-other-containers)
+  - [iOS Arr Apps](#ios-arr-apps)
   - [Jellyfin Companion Stack](#jellyfin-companion-stack)
     - [How They Work Together](#how-they-work-together)
 - [Remote Access](access/)
@@ -81,7 +83,7 @@ services:
 ### External Container to Gluetun
 Add `--network=container:gluetun` when launching a container from outside the stack.
 
-### Container in another docker-compose.yaml
+### Container in another docker compose
 Add `network_mode: "container:gluetun"` to your docker-compose.yaml. Ensure you open the ports through the gluetun container.
 
 ### Arr apps wont connect to prowlarr
@@ -116,6 +118,28 @@ Jump into the Exec console and run the wget command below. Tested with qbittorre
 docker exec -it conatiner_name bash
 wget -qO- https://ipinfo.io
 ```
+
+# Flood UI
+**Flood** is a modern, sleek, and responsive web interface designed for interacting with your torrent client. Whether you're using **qBittorrent**, **Transmission**, **Deluge**, or **rTorrent**, Flood provides a highly visual, intuitive way to manage your downloads.
+
+It’s an excellent alternative to the default web UIs, offering enhanced usability, mobile-friendly design, and real-time updates—all in a polished, minimalist interface.
+
+> ✅ Personally tested and preferred with **qBittorrent**, but supports multiple backends.
+
+### Features
+
+- Full torrent control: add, pause, resume, and delete torrents
+- Real-time download stats and graphs
+- File prioritization and detailed torrent breakdowns
+- Responsive UI – works great on mobile, tablet and desktop
+- Multi-user support with role-based access
+
+### Interface Preview
+
+![image](https://github.com/user-attachments/assets/78876a6f-6953-43e4-872d-91a80b27a19f)
+
+**Flood Webpage [here](https://flood.js.org/)**
+
 
 # Download Clients
 
@@ -203,6 +227,18 @@ The **ARR Stack** is a powerful collection of self-hosted applications designed 
 - Supports both Torrent and Usenet
 - API support and full integration between components
 - Easily extensible with third-party apps and downloaders
+
+# iOS Arr Apps
+Looking to manage your ARR stack from your iPhone? These iOS apps offer varying levels of support, polish, and functionality for remote management and notifications.
+
+| App        | Pricing                         | Highlights                                                                                                                 | Personal Notes                                                   | App Store |
+|------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|-----------|
+| **Helmarr** | Free w/ Pro upgrade ($12.99 CAD one-time) | Manage multiple ARR stacks from one dashboard. Customizable and intuitive interface.                                            | Best value for managing **multiple instances**.                 | [![Download on the App Store](https://img.shields.io/badge/App%20Store-Helmarr-blue?logo=apple&style=for-the-badge)](https://apps.apple.com/app/helmarr/id6446037297) |
+| **Ruddarr** | Free w/ optional IAPs            | Cleanest visual design, integrates notifications for Sonarr and Radarr.                                             | I prefer Discord for notifications, so I don't use this one.    | [![Download on the App Store](https://img.shields.io/badge/App%20Store-Ruddarr-blue?logo=apple&style=for-the-badge)](https://apps.apple.com/app/ruddarr/id1551500325) |
+| **LunaSea** | Fully Free                       | Supports **Sonarr, Radarr, Lidarr, NZBGet**, and **Tautulli**. No ads, no upsells. Has the most support.                                           | Best **well-rounded**, all-in-one client for ARR users.         | [![Download on the App Store](https://img.shields.io/badge/App%20Store-LunaSea-blue?logo=apple&style=for-the-badge)](https://apps.apple.com/app/lunasea/id1480303483) |
+
+> ✅ If you're only choosing one: **LunaSea** is fully featured and totally free.
+
 
 # Jellyfin Companion Stack
 This stack extends Jellyfin's capabilities with modern interfaces and insightful statistics. It includes multiple apps working in harmony to enhance your media server experience, while still offering API compatibility for third-party dashboards and integrations.
