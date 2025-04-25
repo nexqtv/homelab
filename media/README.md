@@ -237,7 +237,7 @@ Looking to manage your ARR stack from your iPhone? These iOS apps offer varying 
 |------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|-----------|
 | **Helmarr** | Free w/ Pro upgrade ($12.99 CAD one-time) | Manage multiple ARR stacks from one dashboard. Customizable and intuitive interface.                                            | Best value for managing **multiple instances**.                 | [![Download on the App Store](https://img.shields.io/badge/App%20Store-Helmarr-blue?logo=apple&style=for-the-badge)](https://apps.apple.com/ca/app/helmarr/id1638624921) |
 | **Ruddarr** | Free w/ optional IAPs            | Cleanest visual design, integrates notifications for Sonarr and Radarr.                                             | I prefer Discord for notifications, so I don't use this one.    | [![Download on the App Store](https://img.shields.io/badge/App%20Store-Ruddarr-blue?logo=apple&style=for-the-badge)](https://apps.apple.com/ca/app/ruddarr/id6476240130) |
-| **LunaSea** | Fully Free                       | Supports **Sonarr, Radarr, Lidarr, NZBGet**, and **Tautulli**. No ads, no upsells. Has the most support.                                           | Best **well-rounded**, all-in-one client for ARR users.         | REMOVED |
+
 
 > ✅ If you're only choosing one: **LunaSea** is fully featured and totally free.
 
