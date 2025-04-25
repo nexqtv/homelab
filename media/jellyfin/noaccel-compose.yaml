@@ -1,0 +1,10 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: jellyfin
+    ports:
+     - "8096:8096" # http
+    volumes:
+     - /docker/jellyfin/config:/config
+     - /data:/media # media sorting is managed in jellyfin during setup
+    restart: unless-stopped
