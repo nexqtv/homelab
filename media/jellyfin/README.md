@@ -2,8 +2,18 @@
 
 This folder contains both docker-compose files for Jellyfin.
 
+# Navigation
+- [Apps](/apps/)
+- [Media Server](/media/)
+  - [Jellyfin](/media/jellyfin/)
+    - [The Differences](#the-differences)
+    - [Proxmox Unprivileged LXC Hardware Acceleration](#proxmox-unprivileged-lxc-hardware-acceleration)
+    - [iOS Apps](#ios-apps)
+    - [Plugins](#plugins)
+    - [Transcoding](#transcoding)
+- [Remote Access](/access/)
 
-### The Differences
+# The Differences
 Jellyfin supports transcoding just like plex. So instead of fully converting the file using something like tdarr (also in this repo) it transcodes as you watch to a different quality or codec. This is very taxxing on hardware just like an Intel CPU (QSV/Quicksync) or NVIDIA GPUs (NVENC/CUDA).
 
 **hwaccel-compose.yaml** - This is the Hardware acceleration version. This is designed for use with Proxmox.
@@ -66,3 +76,46 @@ You may need to install VAAPI drivers:
 ```
 apt install vainfo intel-media-va-driver-non-free
 ```
+
+# iOS Apps
+
+This is just a short list of the ios apps i use for watching jellyfin on my phone or on the go.
+
+
+### Primary App: Streamyfin
+
+**Developer:** Streamyfin
+**Source:** [GitHub](https://github.com/streamyfin/streamyfin)
+
+Streamyfin is my go-to iOS Jellyfin client. It’s fast, actively developed, and packed with features, including:
+	•	Native integration with Jellyseerr for seamless media requests
+	•	Support for the Skip Intro plugin
+	•	Clean and intuitive mobile-first UI
+	•	Frequent updates and improvements
+
+This app strikes the perfect balance between usability and power, making it ideal for daily use.
+
+
+### Backup App: Swiftfin
+
+**Developer:** jellyfin
+**Source:** [GitHub](https://github.com/jellyfin/Swiftfin)
+
+While more minimal, it’s reliable and stable, essentially offering:
+	•	A native iOS experience built on top of Jellyfin’s web interface
+	•	Smooth playback and navigation
+	•	Fewer dependencies, good fallback when Streamyfin has issues
+
+I keep Swiftfin installed as a fallback option. It’s simple, clean, and gets the job done when needed.
+
+
+### Why This Matters
+
+Having multiple clients ensures I can enjoy my media with minimal interruption, no matter what. Streamyfin handles 95% of my usage, while Swiftfin is there to back me up.
+
+
+# Plugins
+
+This section contains all the plugins i use for my instance(s). Some are merely for a little improvement and some are for basic usage.
+
+### Merge Versions
