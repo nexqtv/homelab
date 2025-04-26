@@ -88,10 +88,13 @@ This is just a short list of the ios apps i use for watching jellyfin on my phon
 **Source:** [GitHub](https://github.com/streamyfin/streamyfin)
 
 Streamyfin is my go-to iOS Jellyfin client. It’s fast, actively developed, and packed with features, including:
-	•	Native integration with Jellyseerr for seamless media requests
-	•	Support for the Skip Intro plugin
-	•	Clean and intuitive mobile-first UI
-	•	Frequent updates and improvements
+  •	Native integration with Jellyseerr for seamless media requests
+  
+  •	Support for the Skip Intro plugin
+	
+  •	Clean and intuitive mobile-first UI
+	
+  •	Frequent updates and improvements
 
 This app strikes the perfect balance between usability and power, making it ideal for daily use.
 
@@ -102,9 +105,11 @@ This app strikes the perfect balance between usability and power, making it idea
 **Source:** [GitHub](https://github.com/jellyfin/Swiftfin)
 
 While more minimal, it’s reliable and stable, essentially offering:
-	•	A native iOS experience built on top of Jellyfin’s web interface
-	•	Smooth playback and navigation
-	•	Fewer dependencies, good fallback when Streamyfin has issues
+  •	A native iOS experience built on top of Jellyfin’s web interface
+  
+  •	Smooth playback and navigation
+  
+  •	Fewer dependencies, good fallback when Streamyfin has issues
 
 I keep Swiftfin installed as a fallback option. It’s simple, clean, and gets the job done when needed.
 
