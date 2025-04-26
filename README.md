@@ -22,7 +22,7 @@ This repo is a bit of a snapshot of that journey. Some things here are experimen
 If you’re here just browsing, or thinking about starting your own lab, I hope you find something useful - or at least relatable.
 
 # My Core Setup:
-- Main Server: Old Dell Laptop – 4 Core, 16GB RAM, 256GB SSD + 5TB HDD
+- Main Server: Dell PC – 4 Core, 16GB RAM, 256GB SSD + 5TB HDD
 - Secondary Node: VPS – 6 vCPU, 12GB RAM, 100GB NVMe - Cost of Spotify per month
 - Network Overlay: Tailscale
 - Management: Portainer came first but now using Komodo for Docker
