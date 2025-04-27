@@ -11,7 +11,7 @@ This is currently a work in progress. If you have any issues please submit or su
     - [Features](#features)
   - [Data Folders](#data-folders)
   - [Download Clients](#download-clients)
-    - [NZBGet](#nzbget)
+    - [SABnzbd](#sabnzbd)
     - [qBittorrent](#qbittorrent)
   - [Flood UI](#flood-ui)
   - [Gluetun](#gluetun-vpn)
