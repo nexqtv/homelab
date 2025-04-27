@@ -1,5 +1,7 @@
 # My Homelab Setup
-This is my config backup + sharing setup. This will continue to be updated.
+This is my current configuration / setup. This will continue to be updated. This is a work in progress so please be patient as i add to it over the next little bit.
+
+If you see issues or want to point out mistakes or typos please let me know via Issues. I am new to GitHub (building repos) but im learning so suggestions and help is wanted. Thank you.
 
 # Navigation
 - [Apps](/apps/)
