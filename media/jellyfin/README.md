@@ -158,12 +158,19 @@ My transcoding setup
 **Intel QuickSync (QSV)**
 
 Decoding for:
+
 ✅ H264
+
 ✅ VC1
+
 ✅ HEVC 10bit
+
 ✅ VP9 10bit
 
+----
+
 **Hardware Encoding:** Enabled
+
 **Allow encoding in HEVC format:** Enabled
 
 **Tone Mapping:** Disabled
