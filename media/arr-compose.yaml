@@ -38,6 +38,24 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 
+  nzbget:
+    image: lscr.io/linuxserver/nzbget:latest
+    container_name: nzbget
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Halifax
+      - NZBGET_USER=user
+      - NZBGET_PASS=password
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /docker/nzbget:/config
+      - /data:/data
+    depends_on:
+      - gluetun
+    restart: unless-stopped
+    network_mode: service:gluetun
+
   qbittorrent:
     image: lscr.io/linuxserver/qbittorrent:latest
     container_name: qbittorrent
