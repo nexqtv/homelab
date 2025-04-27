@@ -136,7 +136,7 @@ It’s an excellent alternative to the default web UIs, offering enhanced usabil
 
 ### Interface Preview
 
-![image](https://github.com/user-attachments/assets/78876a6f-6953-43e4-872d-91a80b27a19f)
+![FloodUI Example](/images/IMG_5814.png)
 
 **Flood Webpage [here](https://flood.js.org/)**
 
@@ -152,7 +152,7 @@ I noticed that qBittorrent stalls out if there is a timeout or any type of inter
 
 **Solution #1:** Within the WebUI of qbittorrent head over to advanced options and select `tun0` as the networking interface. See image below.
 
-![image](https://github.com/user-attachments/assets/cb6ea317-db4a-4af2-a46a-52e1d43296f0)
+![qBittorrent GUI Networking Fix](/images/IMG_5813.png)
 
 **Solution #2:** Deunhealth container - automatically restart qbittorrent and prowlarr when they give an unheathly status.
 Add the deunhealth service to your stack. This is already included in arr-compose.yaml
