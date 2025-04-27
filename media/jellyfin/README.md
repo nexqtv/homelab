@@ -125,4 +125,51 @@ Having multiple clients ensures I can enjoy my media with minimal interruption, 
 
 This section contains all the plugins i use for my instance(s). Some are merely for a little improvement and some are for basic usage.
 
-### Merge Versions
+**AudioDB**
+
+**MusicBrainz**
+
+**OMDb**
+
+**Open Subtitles**
+
+**TMDb**
+
+**Studio Images**
+
+**TVmaze**
+
+**TheTVDB**
+
+### Custom Repositories
+
+**Merge Versions**
+[GitHub](https://github.com/danieladov/jellyfin-plugin-mergeversions)
+
+**Intro Skipper**
+[GitHub](https://github.com/intro-skipper/intro-skipper)
+[Manifest](https://manifest.intro-skipper.org/manifest.json)
+
+
+# Transcoding
+My transcoding setup
+
+**Intel QuickSync (QSV)**
+
+Decoding for:
+✅ H264
+✅ VC1
+✅ HEVC 10bit
+✅ VP9 10bit
+
+**Hardware Encoding:** Enabled
+**Allow encoding in HEVC format:** Enabled
+
+**Tone Mapping:** Disabled
+
+**Transcoding thread count:** Auto
+
+### Throttle Transcodes: Enabled
+Throttle Transcodes is really useful as you will buffer alot less. Basically without it, Jellyfin will transcode the entire media file while watching which is not ideal but having it enabled will only transcode near where you're watching and not stressing itself trying to get ahead.
+
+I recommend Throttling Transcodes, you can test if it's better or worse for you.
