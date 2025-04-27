@@ -148,6 +148,7 @@ This section contains all the plugins i use for my instance(s). Some are merely 
 
 **Intro Skipper**
 [GitHub](https://github.com/intro-skipper/intro-skipper)
+
 [Manifest](https://manifest.intro-skipper.org/manifest.json)
 
 
