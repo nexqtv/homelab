@@ -40,11 +40,9 @@ data
 │   │   ├── completed
 │   │   ├── incomplete
 │   │   └── torrents
-│   └── nzbget
+│   └── sabnzbd
 │       ├── completed
-│       ├── intermediate
 │       ├── nzb
-│       ├── queue
 │       └── tmp
 ├── movies
 ├── music
@@ -145,9 +143,8 @@ It’s an excellent alternative to the default web UIs, offering enhanced usabil
 
 # Download Clients
 
-### NZBGet
-**Fix directory does not appear to exist inside the container error**
-This error may appear within Sonarr and Radarr. Once NZBGet is setup go to settings and under INCOMING NZBS change the AppendCategoryDir to No. This will prevent some potential mapping issues and save on unnessesary directories.
+### SABnzbd
+SABnzbd is in my opinion, much easier to use as a user vs NZBget. I tried NZBget before and prefer SABnzbd for two reasons. First, It's visually easier to understand just like the Arr apps. Second, There is a nice mobile app Sable. that looks great and is solid for viewing activity with SABnzbd.
 
 ### qBittorrent
 **qBittorrent Stalls with VPN Timeout**
@@ -206,11 +203,11 @@ The **ARR Stack** is a powerful collection of self-hosted applications designed 
 
 | App       | Role                                         | Description |
 |-----------|----------------------------------------------|-------------|
-| **Radarr** | 🎥 Movie Management                         | Automates the discovery, downloading, and organization of movies. Supports custom quality profiles, scheduled searches, and renaming logic. |
-| **Sonarr** | 📺 TV Show Management                       | Tracks your favorite series, monitors for new episodes, downloads automatically, and organizes them with your preferred naming scheme. |
-| **Lidarr** | 🎵 Music Management                         | Designed for managing music collections. Lidarr can monitor artists, albums, and tracks—automating downloads and organizing your music library. |
-| **Bazarr** | 📝 Subtitle Management                      | Fetches and syncs subtitles for your TV shows and movies using the metadata from Radarr and Sonarr. Supports multiple languages and providers. |
-| **Prowlarr** | 🔍 Indexer Aggregator & Manager         | Acts as a central indexer manager for all other *ARR* apps. Supports over 500 indexers and integrates directly with Radarr, Sonarr, Lidarr, and others for seamless search and filtering. |
+| **Radarr** | Movie Management                         | Automates the discovery, downloading, and organization of movies. Supports custom quality profiles, scheduled searches, and renaming logic. |
+| **Sonarr** | TV Show Management                       | Tracks your favorite series, monitors for new episodes, downloads automatically, and organizes them with your preferred naming scheme. |
+| **Lidarr** | Music Management                         | Designed for managing music collections. Lidarr can monitor artists, albums, and tracks—automating downloads and organizing your music library. |
+| **Bazarr** | Subtitle Management                      | Fetches and syncs subtitles for your TV shows and movies using the metadata from Radarr and Sonarr. Supports multiple languages and providers. |
+| **Prowlarr** | Indexer Aggregator & Manager         | Acts as a central indexer manager for all other *ARR* apps. Supports over 500 indexers and integrates directly with Radarr, Sonarr, Lidarr, and others for seamless search and filtering. |
 
 ## How It Works
 
@@ -237,9 +234,10 @@ Looking to manage your ARR stack from your iPhone? These iOS apps offer varying 
 |------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|-----------|
 | **Helmarr** | Free w/ Pro upgrade ($12.99 CAD one-time) | Manage multiple ARR stacks from one dashboard. Customizable and intuitive interface.                                            | Best value for managing **multiple instances**.                 | [![Download on the App Store](https://img.shields.io/badge/App%20Store-Helmarr-blue?logo=apple&style=for-the-badge)](https://apps.apple.com/ca/app/helmarr/id1638624921) |
 | **Ruddarr** | Free w/ optional IAPs            | Cleanest visual design, integrates notifications for Sonarr and Radarr.                                             | I prefer Discord for notifications, so I don't use this one.    | [![Download on the App Store](https://img.shields.io/badge/App%20Store-Ruddarr-blue?logo=apple&style=for-the-badge)](https://apps.apple.com/ca/app/ruddarr/id6476240130) |
+| **Sable.** | Free w/ optional IAPs            | Amazing app to view activity on SABnzbd from your iPhone or iPad.                                             | Great app for NZBs.    | [![Download on the App Store](https://img.shields.io/badge/App%20Store-Sable-blue?logo=apple&style=for-the-badge)](https://apps.apple.com/ca/app/sable/id6630387095) |
 
 
-> ✅ If you're only choosing one: **LunaSea** is fully featured and totally free.
+> ✅ If you're only choosing one: **Ruddarr** is my personal pick.
 
 
 # Jellyfin Companion Stack
@@ -247,9 +245,9 @@ This stack extends Jellyfin's capabilities with modern interfaces and insightful
 
 | App             | Role                      | Description                                                                                                                                                   |
 |------------------|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Jellyseerr**   | 🌟 Request Management     | A fork of Overseerr tailored for Jellyfin. Lets users request movies and TV shows via a sleek web interface, with admin approval workflows and notifications. |
-| **StreamyStats** | 📊 Live Statistics UI     | A visually polished dashboard to view real-time and historical playback statistics from Jellyfin. Preferred for its elegant UI and detailed user insights.    |
-| **Jellystat**    | ⚙️ Stats API Backend      | Provides a backend API to expose Jellyfin statistics. While not as visually refined as StreamyStats, it is still vital for supporting external tools.         |
+| **Jellyseerr**   | Request Management     | A fork of Overseerr tailored for Jellyfin. Lets users request movies and TV shows via a sleek web interface, with admin approval workflows and notifications. |
+| **StreamyStats** | Live Statistics UI     | A visually polished dashboard to view real-time and historical playback statistics from Jellyfin. Preferred for its elegant UI and detailed user insights.    |
+| **Jellystat**    | Stats API Backend      | Provides a backend API to expose Jellyfin statistics. While not as visually refined as StreamyStats, it is still vital for supporting external tools.         |
 
 ### How They Work Together
 
