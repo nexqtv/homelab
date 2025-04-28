@@ -1,15 +1,15 @@
 # Remote Access
 
-- [Access](/access/)
+
+# Navigation
+- [Apps](/apps/)
+- [Media Server](/media/)
+- [Remote Access](/access/)
   - [Tailscale](#tailscale)
     - [How to Setup Tailscale](#how-to-setup-tailscale)
       - [Setup Tailscale Part One](#setup-tailscale-part-one)
       - [Setup Tailscale Part Two](#setup-tailscale-part-two)
       - [Tailscale Clients](#tailscale-clients)
-- [Apps](/apps/)
-- [Media Server](/media/)
-- [Remote Access](/access/)
-
 
 # Tailscale
 
