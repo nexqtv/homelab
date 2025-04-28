@@ -29,7 +29,9 @@ I use tailscale 24/7 for remote access to my home network, however I do NOT use 
 
 Create Your Tailnet.
 
-Head over to [Tailscale](https://tailscale.com) and create your account. **NOTE: Whatever email you use to sign up with will be your tailnet name unless you change it. It is complicated to change it after creation.**
+Head over to [Tailscale](https://tailscale.com) and create your account. 
+
+**NOTE: Whatever email you use to sign up with will be your tailnet name unless you change it. It is complicated to change it after creation.**
 
 
 ## Step 2: 
