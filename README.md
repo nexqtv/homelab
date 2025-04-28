@@ -4,7 +4,6 @@ This is my current configuration / setup. This will continue to be updated. This
 If you see issues or want to point out mistakes or typos please let me know via Issues. I am new to GitHub (building repos) but im learning so suggestions and help is wanted. Thank you.
 
 # Navigation
-- [Access](/access/)
 - [Apps](/apps/)
 - [Media Server](/media/)
 - [Remote Access](/access/)
