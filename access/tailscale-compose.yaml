@@ -1,0 +1,16 @@
+# THIS IS AN EXAMPLE YAML, FOR THE ORIGINAL FILE PLEASE GET IT FROM TAILSCALE DOCUMENTATION
+
+services:
+  tailscale:
+    image: tailscale/tailscale:latest
+    hostname: tailscale
+    environment:
+      - TS_AUTHKEY=<enter-your-auth-key>
+      - TS_EXTRA_ARGS=--advertise-routes=192.168.2.0/24 # Use your subnet
+      - TS_STATE_DIR=/var/lib/tailscale
+      - TS_USERSPACE=false
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    cap_add:
+      - net_admin
+    restart: unless-stopped
